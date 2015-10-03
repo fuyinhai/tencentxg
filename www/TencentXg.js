@@ -4,7 +4,7 @@ exec = require('cordova/exec');
 var exports = {};
 
 exports.getMessage = function (success, error) {
-  exec(success, error, "TencentXg", "getLMessage", []);
+  exec(success, error, "TencentXg", "getMessage", []);
 };
 
 module.exports = exports;
