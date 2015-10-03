@@ -124,12 +124,14 @@
     <source-file src="src/android/TencentXgPlugin.java"   target-dir="src/com/yuanbaopu/databox"     />
     <source-file src="src/android/XgMessageReceiver.java" target-dir="src/com/yuanbaopu/databox/app" />
     <source-file src="src/android/XGNotification.java"    target-dir="src/com/yuanbaopu/databox/app" />
+    <!--
     <source-file src="src/android/libs/armeabi/libtpnsWatchdog.so"     target-dir="libs/armeabi"/>
     <source-file src="src/android/libs/armeabi/libtpnsSecurity.so"     target-dir="libs/armeabi"/>
     <source-file src="src/android/libs/Xg_sdk_v2.39_20150915_1121.jar" target-dir="libs"/>
     <source-file src="src/android/libs/mid-sdk-2.20.jar"               target-dir="libs"/>
     <source-file src="src/android/libs/wup-1.0.0-SNAPSHOT.jar"         target-dir="libs"/>
     <source-file src="src/android/libs/jg_filter_sdk_1.1.jar"          target-dir="libs"/>
+    -->
   </platform>
   <!--platform name="ios">
     <config-file parent="/*" target="config.xml">

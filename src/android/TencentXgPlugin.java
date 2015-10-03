@@ -12,6 +12,8 @@ import org.json.JSONObject;
 
 import android.util.Log;
 
+import com.tencent.android.tpush.XGPushManager;
+
 public class TencentXgPlugin extends CordovaPlugin {
     private static final String TAG = "tencentxg";
 
@@ -24,6 +26,7 @@ public class TencentXgPlugin extends CordovaPlugin {
      */
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
+        XGPushManager.registerPush(cordova.getActivity().getApplicationContext());
     }
 
     public void onDestroy() {
