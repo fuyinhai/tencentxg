@@ -53,29 +53,23 @@
             android:theme="@android:style/Theme.Translucent"
             android:exported="true" >
             <intent-filter>
-                 <!-- AndroidStudioandroid:name="android.intent.action"-->
                 <action android:name="android.intent.action" />
             </intent-filter>
         </activity>
-        <!--  receiver -->
         <receiver
             android:name="com.tencent.android.tpush.XGPushReceiver"
             android:process=":xg_service_v2" >
             <intent-filter android:priority="0x7fffffff" >
 
-                <!--  SDK -->
                 <action android:name="com.tencent.android.tpush.action.SDK" />
                 <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
-                <!--   -->
                 <action android:name="android.intent.action.USER_PRESENT" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
 
-                <!--  serviceAPPservice -->
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
             </intent-filter>
-            <!--  usbservice -->
             <intent-filter android:priority="0x7fffffff" >
                 <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
                 <action android:name="android.intent.action.MEDIA_REMOVED" />
@@ -84,39 +78,30 @@
                 <data android:scheme="file" />
             </intent-filter>
         </receiver>
-        <!--  service -->
         <service
             android:name="com.tencent.android.tpush.service.XGPushService"
             android:exported="true"
             android:persistent="true"
             android:process=":xg_service_v2" />
             
-        <!--  serviceandroid:name -->
         <service
             android:name="com.tencent.android.tpush.rpc.XGRemoteService"
             android:exported="true" >
             <intent-filter>
-                 <!--  APP.PUSH_ACTIONdemocom.qq.xgdemo -->
-                <action android:name="com.yuanbaopu.databox.app.PUSH_ACTION" />
+                <action android:name="com.yuanbaopu.app.PUSH_ACTION" />
             </intent-filter>
         </service>
         
-        <!-- APPReceiver -->
-        <!-- YOUR_PACKAGE_PATH.CustomPushReceiverReceiver -->
         <receiver android:name="com.yuanbaopu.databox.app.XgMessageReceiver" >
             <intent-filter>
-                <!--  -->
                 <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
-                <!-- / -->
                 <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
             </intent-filter>
         </receiver>
         
-        <!--  APPAccessId2110 -->
         <meta-data
             android:name="XG_V2_ACCESS_ID"
             android:value="$ACCESS_ID" />
-        <!--  APPAccessKeyA12 -->
         <meta-data
             android:name="XG_V2_ACCESS_KEY"
             android:value="$ACCESS_KEY" />
