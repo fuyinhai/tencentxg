@@ -27,6 +27,7 @@
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="TencentXg">
         <param name="android-package" value="com.yuanbaopu.databox.TencentXgPlugin" />
+        <param name="onload" value="true" />
       </feature>
     </config-file>
 
